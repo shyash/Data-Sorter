@@ -1,0 +1,39 @@
+   *{  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+body {               width:   100%;
+              
+               background:white;
+  font-family:   'Montserrat', sans-serif;
+                   display:   -webkit-box;
+          -webkit-box-pack:   center;
+             
+} 
+
+ 
+   	#wrapper{
+   		
+   		 
+   		max-width:    100%;
+                   margin:    0;
+                  display:    -webkit-box;
+       -webkit-box-orient:    vertical;
+         -webkit-box-flex:    1;
+         overflow: auto;
+           
+
+   	}
+   	input:focus {border-color: #2677eb;}
+   	button:hover{background-color: #2677eb;color: white;border-color: white}
+   	button{background: none;border:2px solid #005fe8;font-size: 20px; 
+   	cursor: pointer;color:#005fe8;padding: 5px;margin: 5px; }
+
+   	 @media only screen and (max-width: 770px) {
+   	 	.big{display: none;}
+   	 }
+   	 @media only screen and (min-width: 770px) {
+   	 	.mob{display: none}
+   	 }

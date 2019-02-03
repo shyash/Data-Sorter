@@ -1,0 +1,113 @@
+
+       *{  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+
+}
+
+body {               width:   100%;
+              
+               background:white;
+  font-family:   'Montserrat', sans-serif;
+                   display:   -webkit-box;
+          -webkit-box-pack:   center;
+             
+} 
+
+ 
+    #wrapper{
+      
+       
+      max-width:    100%;
+                   margin:    0;
+                  display:    -webkit-box;
+       -webkit-box-orient:    vertical;
+         -webkit-box-flex:    1;
+         overflow: auto
+           
+
+    }
+    #comptable{text-align-last: center; width: 100%;border-collapse: collapse;
+ }
+
+#comptable td, #comptable th {
+ 
+  padding: 8px;
+}
+#comptable th{
+  border: 0px solid #ddd;
+  padding: 8px;
+}
+#validForm{
+  border:0px solid red;
+  text-align:center;
+  padding: 10px;
+  background: #e91e63;
+  color: white;
+}
+@-webkit-keyframes fadeIn{
+  0%{opacity: 0}
+  100%{opacity: 1}
+}
+@keyframes fadeIn{
+  0%{opacity: 0}
+  100%{opacity: 1}
+}@-webkit-keyframes fadeOut{
+  0%{opacity: 1}
+  100%{opacity: 0}
+}@keyframes fadeOut{
+  0%{opacity: 1}
+  100%{opacity: 0}
+}
+/*<%var num ;
+for (var i = 0; i < item.dataProps.length; i++) {
+    if(item.dataProps[i] == sortprop) num = i
+  }
+%>
+#comptable th:nth-of-type(<%=num+2%>){
+ background-color:#c16749;
+}*/
+@media only screen and (min-width: 770px) {
+    #comptable th:hover{
+  cursor: pointer;
+
+  background-color:#3f51b5;
+ 
+}
+
+#comptable th:nth-of-type(1):hover{
+  cursor:default;
+
+  
+}    
+     }
+
+
+/*#comptable tr:nth-child(even){background-color: #2880ff24;}*/
+
+#comptable td:hover {font-weight: 700; }
+#comptable tr:hover {background: #edecfe }
+
+#comptable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:  #6d7ae0;
+  color: white;
+}
+ #propContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;
+ } 
+     @media only screen and (max-width: 770px) {
+      #formHolder{-ms-flex-wrap: wrap;flex-wrap: wrap;}
+      .info{text-align: center;}
+     }
+     @media only screen and (min-width: 770px) {
+      #formHolder{-ms-flex-wrap: nowrap;flex-wrap: nowrap}
+      .info{text-align: left;padding-left: 15px;}
+     }
+     input{-webkit-animation: fadeIn 2s;animation: fadeIn 2s}
+   

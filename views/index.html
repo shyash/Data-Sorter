@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DATA SORTER</title>
+		<meta charset="UTF-8">
+   	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#01518c" />
+		<link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+<link rel="manifest" href="../favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../favicons/ms-icon-144x144.png">
+ 
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="../home.css">
+</head>
+
+<body>
+	<div id="wrapper">
+		<section style="">	
+			<div class="mob" style="background: #005fe8; position: relative;color: white;text-align-last: center;">
+				<img src=".//blue.png" width="100%" height="auto" style="opacity: 0.5;" >
+				<h1 style="position: absolute;top: 40%;left: 50%; transform: translate(-50%, -50%);">Data Sorter</h1>
+				<p  style="position: absolute;top: 55%;left: 50%; transform: translate(-50%, -50%);">Make rank tables and save them</p>
+ </div>
+			<div class="big" style="background: #005fe8; position: relative;color: white;text-align-last: center;">
+				<img src=".//blue.png" width="100%" height="300px" style="opacity: 0.5;" >
+				<h1 style="position: absolute;top: 40%;left: 50%; transform: translate(-50%, -50%);">Data Sorter</h1>
+				<p  style="position: absolute;top: 55%;left: 50%; transform: translate(-50%, -50%);">Make rank tables and save them</p>
+			</div>
+			<div style="text-align-last: center;max-width: 500px;-webkit-box-flex:   1;
+   		
+            display:flex;justify-content:center;align-items:center;margin :20px auto;">
+				<div>	<p style="text-align-last: left;color:#2677eb;font-size: 18px;margin-left: 20px;">You can use as many as properties for sorting, like name, age, marks etc.</p>
+				<p style="margin: 20px;color:#2677eb;margin-left: 20px;">
+				Add properties you want to sort:
+			</p>
+				<form method="POST" action="/addSort">
+	<table style="color:#2677eb;margin-left: 20px;">
+		 <tbody>
+		 	<tr >
+				<td ><p style="margin:10px;">Prop 1</p></td>
+				<td ><input type="text" required name="prop"  value="" style="margin:10px;text-align-last: left;padding-left: 10px;color:#2677eb "></td>
+		    </tr>
+	</tbody>
+	</table>
+<div></div>
+	<div onclick="func()" style="position: relative; cursor: pointer;background:#ff5722;height: 30px;width: 30px;border-radius: 50%;text-align-last: center; float: left;margin-left:25px">
+		<p style="font-size: 40px;text-align-last: center;color:white;position: absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);">+</p>
+	</div>
+
+				<button >start here</button>
+</form></div>
+					
+			</div>
+
+
+</section>
+
+	</div>
+
+<script type="text/javascript">
+
+	var count = 1 
+	function func() {
+		count++
+		document.querySelector("tbody").appendChild(document.createElement('tr')) 
+		document.querySelector("tr:nth-of-type("+count+")").innerHTML = '<td><p style="margin:10px;">Prop '+count+'</p></td> <td><input type="text" required name="prop" value="" style="margin:10px;text-align-last: left;padding-left: 10px;color:#2677eb "></td>'		
+    }
+
+</script>
+</body>
+</html>
+

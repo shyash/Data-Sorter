@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DATA SORTER</title>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#01518c" />
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+<link rel="manifest" href="../favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../favicons/ms-icon-144x144.png">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="../sort.css">
+</head>
+<body>
+	<div id="wrapper">
+	<div id="formHolder" style="background:#2880ff;color: white;padding: 25px;display: flex;flex-direction: row;justify-content: space-around;">
+    <div><p style="margin-top: 10px;">Start adding objects with the provided properties: </p>
+        <div id="tableDiv">
+         <table style="margin-top: 10px;" id="propTable">
+     </table></div>  <button onclick="addobj()" style="padding: 10px;border-radius: 15%;cursor: pointer;  margin-top:10px; border: 0px solid red;color: white;font-size: 15px;background: #009688; ">submit</button>
+    <button onclick="arrangePropEdit()" id="propeditbtn" style="padding: 10px;border-radius: 15%;cursor: pointer;  margin-top:10px;margin-left: 10px; border: 0px solid red;color: white;font-size: 15px;background: #2196f3; ">edit name of properties</button>
+   </div>
+  	  	
+
+	 <div style="color:  white;display: flex;flex-direction: column-reverse;justify-content: space-around; ">
+    <div style="width: 350px; display: flex;flex-direction: column-reverse;">
+      <button onclick="printTable()" style="padding: 7px;cursor: pointer;  margin-top:10px;border: 0px solid red;color: white;font-size: 15px;background:#009688;">print / save table</button><button onclick="edit()" style="padding: 7px;cursor: pointer;  margin-top:10px;border: 0px solid red;color: white;font-size: 15px;background: #2196f3;">edit data</button>
+    <p class="info" > click the property to sort the data accordingly, click again to change to ascending order</p></div>
+   
+      <div style="padding: 20px; color: white;padding-left: 50px;">
+              <p style="">Add more properties</p>
+
+    <div id="addmore">
+     <div id="propContainer">
+
+        <div>
+         <p style="margin-top:10px;">Prop <span id="propnum"></span></p>
+         <input type="text" required name="prop"  value="" style="margin:10px;text-align-last: left;padding-left: 10px;color:#2677eb ">
+       </div> 
+  </div>
+
+  </div>
+ 
+<i class="fas fa-plus-circle" style="font-size: 20px;color:#ffc107;cursor: pointer;" onclick="func()"></i>
+<button class="submit" style="padding: 7px;border-radius: 15%;cursor: pointer;  margin:10px;border: 0px solid red;color: white;font-size: 15px;background: #009688; " onclick="addProp()" >submit</button>
+ <div id="validForm" style="display: none; animation-name:  fadeIn ; animation-duration:  2s ">
+      please fill out all the fields
+    </div>
+</div>
+  </div>
+    
+
+	</div>
+
+		<div style="overflow:auto;">
+				 <table id="comptable">
+				 	<tbody>
+				 		<tr>
+ 							<th>S.NO.</th>
+ 						</tr>
+ 					</tbody>
+ 						
+ 				</table>
+		</div>
+
+</div>
+<script type="text/javascript" id="func"></script>
+ <script type="text/javascript" src="../sort.js"></script> </script>
+</body>
+</html>
